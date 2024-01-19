@@ -2,7 +2,7 @@ window.toastActionMsgCustom = {
     notes: {
         mutate: {
             success: "Document créé avec succès",
-            error: "Erreur avec le document créé",
+            error: "Erreur avec le document créé", // From the second script, as it's more specific.
         },
         delete: {
             success: "Document supprimé",
@@ -27,16 +27,16 @@ window.toastActionMsgCustom = {
             },
         },
         validateEmails: {
-            success: "Document partagé avec succès",
+            success: "Document partagé avec succès", // Choose based on preference, both are valid.
             error: {
                 submitError: "Il y avait une erreur",
                 dirtyInput:
-                    "Assurez-vous d'avoir ajouté tous les e-mails de l'entrée avant de valider",
+                    "Assurez-vous d'avoir ajouté tous les e-mails de l'entrée avant de soumettre", // From the first script, seems more detailed.
             },
         },
         cloneNote: {
             success: "Copie du document enregistrée.",
-            error: "Erreur de la copie du document",
+            error: "Erreur de copie du document", // From the second script, as it's more specific.
         },
         removeSharedInvitation: {
             success: "Document supprimé",
@@ -51,6 +51,16 @@ window.toastActionMsgCustom = {
         invalidUrlInvitation: "URL invalide. Type ou identifiant manquant",
     }
 };
+
+window.modalMsgCustom = {
+    form: {
+        error: {
+            general: "Une erreur est survenue. Si le problème persiste, merci d'envoyer un mail à contact@ordotype.fr",
+            exceededStorage: `Vous &ecirc;tes &agrave; court de stockage, vous pouvez en acheter sur <a native href="/membership/stockage-supplementaire">cette page</a>`,
+        },
+    }
+};
+
 window.validationMsgCustom = {
    mixed: {
       oneOf: "Veuillez sélectionner le type d'ordonnance"
@@ -58,13 +68,4 @@ window.validationMsgCustom = {
     string: {
     email: "Email non valide"
   }
-}
-
-window.modalMsgCustom = {
-    form: {
-        error: {
-            general: "Une erreur est survenue. Si le problème persiste, merci d'envoyer un mail à contact@ordotype.fr",
-            exceededStorage: `Vous &ecirc;tes &agrave; court de stockage, vous pouvez en acheter sur <a native href="/membership/stockage-supplementaire">cette page</a>`,
-        }
-    }
-}
+};
